@@ -1,13 +1,37 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
+@layer utilities {
+    .bg-hero {
+      background: linear-gradient(rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.55)), url('./img/Untitled.jpg') center/cover no-repeat;
+      height: 30vh;
+      z-index: -55;
+    }
+    .bg-hero-dark {
+      background: linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.55)), url('./img/Untitled.jpg') center/cover no-repeat;
+      height: 30vh;
+      z-index: -55;
+    }
+  }
+
+  @layer base {
+    @font-face {
+      font-family: Shabnam;
+      src: url('../public/fonts/shabnam-font-v2.4.0/NotoNaskhArabic-Regular.ttf');
+    }
+  
+    @font-face {
+      font-family: Shabnam-digit;
+      font-style: 'bold';
+      font-weight: 400;
+      font-display: swap;
+      src: url('../public/fonts/shabnam-font-v2.4.0/Shabnam-Light.woff2');
+    }
+  }
+  
+  @layer base {
+    * {
+      font-family:'Shabnam', "Shabnam-digit";
+    }
+  }
