@@ -3,35 +3,49 @@
 @tailwind utilities;
 
 @layer utilities {
-    .bg-hero {
-      background: linear-gradient(rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.55)), url('./img/Untitled.jpg') center/cover no-repeat;
-      height: 30vh;
-      z-index: -55;
-    }
-    .bg-hero-dark {
-      background: linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.55)), url('./img/Untitled.jpg') center/cover no-repeat;
-      height: 30vh;
-      z-index: -55;
-    }
+  .bg-hero {
+    background: linear-gradient(rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.55)), url('./img/Untitled.jpg') center/cover no-repeat;
+    height: 30vh;
+    z-index: -55;
   }
 
-  @layer base {
-    @font-face {
-      font-family: Shabnam;
-      src: url('../public/fonts/shabnam-font-v2.4.0/NotoNaskhArabic-Regular.ttf');
-    }
-  
-    @font-face {
-      font-family: Shabnam-digit;
-      font-style: 'bold';
-      font-weight: 400;
-      font-display: swap;
-      src: url('../public/fonts/shabnam-font-v2.4.0/Shabnam-Light.woff2');
+  .bg-hero-dark {
+    background: linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.55)), url('./img/Untitled.jpg') center/cover no-repeat;
+    height: 30vh;
+    z-index: -55;
+  }
+
+  .path {
+    stroke-dasharray: 15;
+    animation: move 35s linear infinite;
+  }
+
+  @keyframes move {
+    to {
+      stroke-dashoffset: 1000;
     }
   }
-  
-  @layer base {
-    * {
-      font-family:'Shabnam', "Shabnam-digit";
-    }
+}
+
+
+
+@layer base {
+  @font-face {
+    font-family: Shabnam;
+    src: url('../public/fonts/shabnam-font-v2.4.0/NotoNaskhArabic-Regular.ttf');
   }
+
+  @font-face {
+    font-family: Shabnam-digit;
+    font-style: 'bold';
+    font-weight: 400;
+    font-display: swap;
+    src: url('../public/fonts/shabnam-font-v2.4.0/Shabnam-Light.woff2');
+  }
+}
+
+@layer base {
+  * {
+    font-family: 'Shabnam', "Shabnam-digit";
+  }
+}
