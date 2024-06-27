@@ -18,7 +18,7 @@ const ThemeSwitcher = () => {
   return (
     <button
       onClick={toggleDarkMode}
-      className="p-2 bg-gray-300 dark:bg-gray-800 text-black dark:text-white rounded-full flex items-center justify-center"
+      className="p-2 w-full bg-gray-300 dark:bg-gray-800 text-black dark:text-white rounded-b-full flex items-center justify-center"
     >
       {darkMode ? (
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" class="size-6">

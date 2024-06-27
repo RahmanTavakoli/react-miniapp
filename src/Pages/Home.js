@@ -42,7 +42,7 @@ export const Home=()=>{
              {/* <!-- AboutUs -->  */}
             <div>
                 <Link  to='/AboutUs'>
-                <button className="ring-0 bg-gradient-to-b from-cyan-400 to-blue-500 rounded-full p-1 m-1 focus:ring-blue-100 focus:ring-0">
+                <button className="ring-0 bg-gradient-to-b from-cyan-400 to-blue-500 rounded-full p-1 focus:ring-blue-100 focus:ring-0">
                     <div className="ring-2 ring-stone-200 bg-gradient-to-b from-cyan-400 to-blue-500 p-4 rounded-full dark:ring-gray-800">
                         <span className="text-stone-200 ">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
@@ -59,7 +59,7 @@ export const Home=()=>{
             {/* <!-- Tutorial -->  */}
             <div>
                 <Link to='/Help'>
-                <button className="ring-0 bg-gradient-to-b from-indigo-500 via-purple-500 to-pink-500 rounded-full p-1 m-1 focus:ring-blue-100 focus:ring-0">
+                <button className="ring-0 bg-gradient-to-b from-indigo-500 via-purple-500 to-pink-500 rounded-full mx-0.5 p-1 focus:ring-blue-100 focus:ring-0">
                     <div className="ring-2 ring-stone-200 bg-gradient-to-b from-indigo-500 via-purple-500 to-pink-500 p-4 rounded-full  dark:ring-gray-800">
                         <span className="text-stone-200 ">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
@@ -77,7 +77,7 @@ export const Home=()=>{
             <div>
                 <Link to='/Category'>
                 <button 
-                    className="ring-0 bg-gradient-to-b from-indigo-500 from-5% via-sky-500 via-20% to-emerald-500 to-80% rounded-full p-1 m-1 focus:ring-blue-100 focus:ring-0">
+                    className="ring-0 bg-gradient-to-b from-indigo-500 from-5% via-sky-500 via-20% to-emerald-500 to-80% rounded-full p-1 focus:ring-blue-100 focus:ring-0">
                     <div className="ring-2 ring-stone-200 bg-gradient-to-b from-indigo-500 from-5% via-sky-500 via-20% to-emerald-500 to-80% p-4 rounded-full  dark:ring-gray-800">
                         <span className="text-stone-200 ">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
@@ -94,7 +94,7 @@ export const Home=()=>{
              {/* <!-- Wallet -->  */}
             <div>
                 <Link to='/Wallet'>
-                <button className="ring-0 bg-gradient-to-b from-blue-300 to-blue-600 rounded-full p-1 m-1 focus:ring-blue-100 focus:ring-0">
+                <button className="ring-0 bg-gradient-to-b from-blue-300 to-blue-600 rounded-full mx-0.5 p-1 focus:ring-blue-100 focus:ring-0">
                     <div className="ring-2 ring-stone-200 bg-gradient-to-b from-blue-300 to-blue-600 p-4 rounded-full  dark:ring-gray-800">
                         <span className="text-stone-200 ">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="size-8">
@@ -113,7 +113,7 @@ export const Home=()=>{
             <div>
                 <Link to='/FAQ'>
                 <button 
-                    className="ring-0 bg-gradient-to-b from-purple-300 to-purple-700 rounded-full p-1 m-1 focus:ring-blue-100 focus:ring-0">
+                    className="ring-0 bg-gradient-to-b from-purple-300 to-purple-700 rounded-full p-1 focus:ring-blue-100 focus:ring-0">
                     <div className="ring-2 ring-stone-200 bg-gradient-to-b from-purple-300 to-purple-700 p-4 rounded-full  dark:ring-gray-800">
                         <span className="text-stone-200 ">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
