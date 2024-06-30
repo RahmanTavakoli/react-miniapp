@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import React from "react"
-import imgSrc from '../img/chpic.su_-_AniDucks_043-ezgif.com-resize.gif';
 
 export const Home=()=>{
     return (
@@ -41,7 +40,7 @@ export const Home=()=>{
         <div className="flex justify-center">
              {/* <!-- AboutUs -->  */}
             <div>
-                <Link  to='/AboutUs'>
+                <Link  to='/Home/AboutUs'>
                 <button className="ring-0 bg-gradient-to-b from-cyan-400 to-blue-500 rounded-full p-1 focus:ring-blue-100 focus:ring-0">
                     <div className="ring-2 ring-stone-200 bg-gradient-to-b from-cyan-400 to-blue-500 p-4 rounded-full dark:ring-gray-800">
                         <span className="text-stone-200 ">
@@ -58,7 +57,7 @@ export const Home=()=>{
             </div>
             {/* <!-- Tutorial -->  */}
             <div>
-                <Link to='/Help'>
+                <Link to='/Home/Help'>
                 <button className="ring-0 bg-gradient-to-b from-indigo-500 via-purple-500 to-pink-500 rounded-full mx-0.5 p-1 focus:ring-blue-100 focus:ring-0">
                     <div className="ring-2 ring-stone-200 bg-gradient-to-b from-indigo-500 via-purple-500 to-pink-500 p-4 rounded-full  dark:ring-gray-800">
                         <span className="text-stone-200 ">
@@ -75,7 +74,7 @@ export const Home=()=>{
             </div>
              {/* <!-- Category -->  */}
             <div>
-                <Link to='/Category'>
+                <Link to='/Home/Category'>
                 <button 
                     className="ring-0 bg-gradient-to-b from-indigo-500 from-5% via-sky-500 via-20% to-emerald-500 to-80% rounded-full p-1 focus:ring-blue-100 focus:ring-0">
                     <div className="ring-2 ring-stone-200 bg-gradient-to-b from-indigo-500 from-5% via-sky-500 via-20% to-emerald-500 to-80% p-4 rounded-full  dark:ring-gray-800">
@@ -93,7 +92,7 @@ export const Home=()=>{
             </div>
              {/* <!-- Wallet -->  */}
             <div>
-                <Link to='/Wallet'>
+                <Link to='/Home/Wallet'>
                 <button className="ring-0 bg-gradient-to-b from-blue-300 to-blue-600 rounded-full mx-0.5 p-1 focus:ring-blue-100 focus:ring-0">
                     <div className="ring-2 ring-stone-200 bg-gradient-to-b from-blue-300 to-blue-600 p-4 rounded-full  dark:ring-gray-800">
                         <span className="text-stone-200 ">
@@ -111,7 +110,7 @@ export const Home=()=>{
             </div>
              {/* <!-- FAQ -->  */}
             <div>
-                <Link to='/FAQ'>
+                <Link to='/Home/FAQ'>
                 <button 
                     className="ring-0 bg-gradient-to-b from-purple-300 to-purple-700 rounded-full p-1 focus:ring-blue-100 focus:ring-0">
                     <div className="ring-2 ring-stone-200 bg-gradient-to-b from-purple-300 to-purple-700 p-4 rounded-full  dark:ring-gray-800">
@@ -140,7 +139,7 @@ export const Home=()=>{
             <h1 className="text-[30px] m-3 text-center ">خوش آمدید</h1>
             <p className="text-sm ms-7 opacity-50">در اینجا میتوانید فروشگاه خود را ببینید</p>
         </div>
-        <Link to="/WelcomeMessage" className="p-5 bg-blue-800 rounded-[15px] m-3 w-[87%] flex justify-center mx-auto text-white">وارد شدن
+        <Link to="/Home/WelcomeMessage" className="p-5 bg-blue-800 rounded-[15px] m-3 w-[87%] flex justify-center mx-auto text-white">وارد شدن
             <span classNameName="ps-2">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.3" stroke="currentColor" className="size-6">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v6m3-3H9m12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />

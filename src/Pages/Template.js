@@ -104,7 +104,7 @@ export const Template = () => {
                 </p>
                 {/*  Toggle Content  */}
                 <div id="button-content" className={`mt-80 ${isChecked ? 'block' : 'hidden'}`}>
-                    <Link to="/Dashboard" id="submitButton"
+                    <Link to="/Home/WelcomeMessage/GettingStart/BotInfo/Template/Bot&Adminvalidated" id="submitButton"
                         className="mt-40 p-4 bg-sky-500 dark:bg-sky-800 rounded-[15px] m-3 w-[87%] flex justify-center mx-auto text-white">
                         بعدی
                         <span className="ps-2">

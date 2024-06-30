@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 import React from "react"
 
 export const BotAdminvalidated=()=>{
@@ -30,12 +31,12 @@ export const BotAdminvalidated=()=>{
                          <h1 class="text-[17px] opacity-90 text-blue-500 dark:text-blue-300 mx-2"> قالب محصولات غذایی </h1>
                      </section>
                 </div>
-                <div id="" class="mt-1">
+                <Link to="/Home/WelcomeMessage/GettingStart/BotInfo/Template/Bot&Adminvalidated/Dashboard" class="mt-1">
                     <a href="index1.html" id="submitButton"
                         class=" mt-40 p-3 bg-sky-500  dark:bg-sky-700 rounded-[15px] m-3 w-[87%] flex justify-center mx-auto text-white">
                         راه اندازی فروشگاه
                     </a>
-                </div>
+                </Link>
                 {/* <!-- End Toggle Content --> */}
         </div>
         </React.Fragment>

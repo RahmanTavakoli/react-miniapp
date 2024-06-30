@@ -96,7 +96,7 @@ export const GettingStart = () => {
                 )}
                 {selectedOption === 'no-bot' && (
                     <div id="no-bot-extra-content" className="mt-80">
-                        <Link to="/BotInfo" id="submitButton" className="mt-40 p-4 bg-sky-500 dark:bg-sky-800 rounded-[15px] m-3 w-[87%] flex justify-center mx-auto text-white">بعدی
+                        <Link to="/Home/WelcomeMessage/GettingStart/BotInfo" id="submitButton" className="mt-40 p-4 bg-sky-500 dark:bg-sky-800 rounded-[15px] m-3 w-[87%] flex justify-center mx-auto text-white">بعدی
                             <span className="ps-2">
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="size-6">
                                     <path strokeLinecap="round" strokeLinejoin="round" d="M6.75 15.75 3 12m0 0 3.75-3.75M3 12h18" />
