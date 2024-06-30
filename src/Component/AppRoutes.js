@@ -57,18 +57,18 @@ const AppRoutes = () => {
       <>
         <ThemeSwitcher />
         <Routes>
-          <Route path='/' element={ <Home />}/>
-          <Route path='/WelcomeMessage' element={ <WelcomeMessage />}/>
-          <Route path='/GettingStart' element={ <GettingStart />}/>
-          <Route path='/BotInfo' element={ <BotInfo />}/>
-          <Route path='/Template' element={ <Template />}/>
-          <Route path='/Bot&Adminvalidated' element={ <BotAdminvalidated />}/>
-          <Route path='/Dashboard' element={ <Dashboard />}/>
-          <Route path='/AboutUs' element={ <AboutUs />}/>
-          <Route path='/Help' element={ <Help />}/>
-          <Route path='/Category' element={ <Category />}/>
-          <Route path='/Wallet' element={ <Wallet />}/>
-          <Route path='/FAQ' element={ <FAQ />}/>
+          <Route path='/Home' element={ <Home />}/>
+          <Route path='/Home/WelcomeMessage' element={ <WelcomeMessage />}/>
+          <Route path='/Home/WelcomeMessage/GettingStart' element={ <GettingStart />}/>
+          <Route path='/Home/WelcomeMessage/GettingStart/BotInfo' element={ <BotInfo />}/>
+          <Route path='/Home/WelcomeMessage/GettingStart/BotInfo/Template' element={ <Template />}/>
+          <Route path='/Home/WelcomeMessage/GettingStart/BotInfo/Template/Bot&Adminvalidated' element={ <BotAdminvalidated />}/>
+          <Route path='/Home/WelcomeMessage/GettingStart/BotInfo/Template/Bot&Adminvalidated/Dashboard' element={ <Dashboard />}/>
+          <Route path='/Home/AboutUs' element={ <AboutUs />}/>
+          <Route path='/Home/Help' element={ <Help />}/>
+          <Route path='/Home/Category' element={ <Category />}/>
+          <Route path='/Home/Wallet' element={ <Wallet />}/>
+          <Route path='/Home/FAQ' element={ <FAQ />}/>
           <Route path='*' element={ <Error404 />}/>
         </Routes>
       </>
