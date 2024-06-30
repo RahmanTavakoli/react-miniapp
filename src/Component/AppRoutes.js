@@ -57,6 +57,7 @@ const AppRoutes = () => {
       <>
         <ThemeSwitcher />
         <Routes>
+          <Route path='/' element={ <Home />}/>
           <Route path='/Home' element={ <Home />}/>
           <Route path='/Home/WelcomeMessage' element={ <WelcomeMessage />}/>
           <Route path='/Home/WelcomeMessage/GettingStart' element={ <GettingStart />}/>

@@ -14,7 +14,7 @@ export const WelcomeMessage=()=>{
                 میتوانید فروشگاه شخصی خود را بدون نیاز هیچ دانش خاصی بدون برنامه نویس در پیام رسان تلگرام بسازید و شخصی
                 سازی کنید آسان و منعطف</p>
         </div>
-        <Link to="/GettingStart"
+        <Link to="/Home/WelcomeMessage/GettingStart"
             class="p-4 bg-sky-600 rounded-[15px] my-12 w-[87%] flex justify-center mx-auto font-semibold text-white">برو بریم
         </Link>
 
