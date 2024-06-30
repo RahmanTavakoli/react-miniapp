@@ -71,7 +71,7 @@ export const Template = () => {
                                 className="text-slate-700 has-[:checked]:ring-indigo-200 has-[:checked]:text-indigo-800 has-[:checked]:bg-indigo-50 grid grid-cols-[24px_1fr_auto] items-center gap-6 rounded-lg p-4 ring-1 ring-transparent hover:bg-slate-100 dark:text-gray-400 peer-checked:bot">
                                 <input name="payment_method" id="template-2" value="bot" type="radio"
                                     className="box-content h-1.5 w-1.5 appearance-none rounded-full border-[5px] border-white bg-white bg-clip-padding outline-none ring-1 ring-gray-950/10 checked:border-indigo-500 checked:ring-indigo-500 peer" />
-                                قالب محصولات غذایی
+                                قالب  محصولات غذایی
                                 {/*  Example Telegram bot link */}
                                 <a href="">
                                     <svg fill="#000000" height="25px" width="25px" version="1.1" id="Layer_1"

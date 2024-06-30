@@ -106,7 +106,7 @@ export const Home=()=>{
                 </button>
                 </Link>
 
-                <p className="text-sm opacity-45 text-center">کیف پول</p>
+                <p className="text-sm opacity-45 text-center">کیف  پول</p>
             </div>
              {/* <!-- FAQ -->  */}
             <div>

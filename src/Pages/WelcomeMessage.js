@@ -9,7 +9,7 @@ export const WelcomeMessage=()=>{
     <div class=" bg-transparent  dark:text-white">
         <div class=" justify-center mt-10">
         <img src={imgSrc} className="mx-auto" alt="AniDucks" />
-            <h1 class="text-[15px] m-12 text-center " dir="ltr"> چیه؟ vendors </h1>
+            <h1 class="text-[15px] m-12 text-center " dir="ltr"> چیه؟  vendors </h1>
             <p class="text-sm text-center mx-20 opacity-50" dir="rtl">در <span class="text-sky-600">vendors</span>
                 میتوانید فروشگاه شخصی خود را بدون نیاز هیچ دانش خاصی بدون برنامه نویس در پیام رسان تلگرام بسازید و شخصی
                 سازی کنید آسان و منعطف</p>

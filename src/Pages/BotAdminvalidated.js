@@ -6,7 +6,7 @@ export const BotAdminvalidated=()=>{
         <React.Fragment>
          {/* <!-- body --> */}
         <div class=" bg-transparent  dark:text-white">
-            <h1 class="text-lg mx-5"> Shop Name حالا آماده است...!</h1>
+            <h1 class="text-lg mx-5"> Shop Name  حالا آماده است...!</h1>
         {/* <!-- CheckBox --> */}
                 <div class="max-w-md mx-3 bg-stone-300 h-auto rounded-md mt-5 p-1 dark:bg-gray-800 bg-opacity-95 shadow py-3 px-4"dir="rtl">
                      {/* <!-- User Validated info EMAIL --> */}

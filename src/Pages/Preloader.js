@@ -2,7 +2,7 @@
 
 import React from 'react';
 
-const Preloader = () => {
+const Preloader =() => {
   return (
     <div className="flex items-center justify-center w-full h-[86vh] " dir='ltr'>
       <div className="flex justify-center items-center space-x-1 text-[20px] text-gray-700">
