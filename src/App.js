@@ -1,7 +1,7 @@
 import './App.css';
 
 import React, { useEffect, useState } from 'react';
-import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
+import { Route, BrowserRouter as Router, Routes, useLocation, useNavigate } from "react-router-dom";
 
 import { AboutUs } from "./Pages/AboutUs";
 import { BotAdminvalidated } from "./Pages/BotAdminvalidated";
@@ -21,12 +21,47 @@ import { WelcomeMessage } from "./Pages/WelcomeMessage";
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
+  const navigate = useNavigate();
+  const location = useLocation();
 
   useEffect(() => {
     // شبیه‌سازی بارگذاری
     setTimeout(() => {
       setIsLoading(false);
     }, 3000); // مدت زمان شبیه‌سازی شده برای بارگذاری
+  }, []);
+
+  useEffect(() => {
+    const handleBackButton = () => {
+      if (window.Telegram.WebApp) {
+        window.Telegram.WebApp.BackButton.show();
+        window.Telegram.WebApp.BackButton.onClick(() => {
+          navigate(-1);
+        });
+      }
+    };
+
+    handleBackButton();
+
+    return () => {
+      if (window.Telegram.WebApp) {
+        window.Telegram.WebApp.BackButton.hide();
+        window.Telegram.WebApp.BackButton.offClick();
+      }
+    };
+  }, [location, navigate]);
+
+  useEffect(() => {
+    const handleBeforeUnload = (event) => {
+      event.preventDefault();
+      event.returnValue = ''; // Chrome requires returnValue to be set
+    };
+
+    window.addEventListener('beforeunload', handleBeforeUnload);
+
+    return () => {
+      window.removeEventListener('beforeunload', handleBeforeUnload);
+    };
   }, []);
 
   return (
