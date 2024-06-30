@@ -21,28 +21,24 @@ const AppRoutes = () => {
     const location = useLocation();
   
     useEffect(() => {
-      const handleBackButton = () => {
-        if (window.Telegram.WebApp) {
-          window.Telegram.WebApp.BackButton.show();
-          window.Telegram.WebApp.BackButton.onClick(() => {
-            if (location.pathname === '/') {
-              const confirmExit = window.confirm("Are you sure exit from Vendorz؟");
-              if (confirmExit) {
-                window.Telegram.WebApp.close();
-              }
-            } else {
-              navigate(-1);
-            }
-          });
-        }
-      };
+      const tg = window.Telegram.WebApp;
   
-      handleBackButton();
+      if (tg) {
+        tg.BackButton.show();
+        tg.BackButton.onClick(() => {
+          if (location.pathname === '/') {
+            tg.HapticFeedback.impactOccurred('medium');
+            tg.close();
+          } else {
+            navigate(-1);
+          }
+        });
+      }
   
       return () => {
-        if (window.Telegram.WebApp) {
-          window.Telegram.WebApp.BackButton.hide();
-          window.Telegram.WebApp.BackButton.offClick();
+        if (tg) {
+          tg.BackButton.hide();
+          tg.BackButton.offClick();
         }
       };
     }, [location, navigate]);
