@@ -17,62 +17,66 @@ import { Wallet } from "../Pages/Wallet";
 import { WelcomeMessage } from "../Pages/WelcomeMessage";
 
 const AppRoutes = () => {
-  const navigate = useNavigate();
-  const location = useLocation();
-
-  useEffect(() => {
-    const handleBackButton = () => {
-      if (window.Telegram.WebApp) {
-        window.Telegram.WebApp.BackButton.show();
-        window.Telegram.WebApp.BackButton.onClick(() => {
-          navigate(-1);
-        });
-      }
-    };
-
-    handleBackButton();
-
-    return () => {
-      if (window.Telegram.WebApp) {
-        window.Telegram.WebApp.BackButton.hide();
-        window.Telegram.WebApp.BackButton.offClick();
-      }
-    };
-  }, [location, navigate]);
-
-  useEffect(() => {
-    const handleBeforeUnload = (event) => {
-      event.preventDefault();
-      event.returnValue = ''; // Chrome requires returnValue to be set
-    };
-
-    window.addEventListener('beforeunload', handleBeforeUnload);
-
-    return () => {
-      window.removeEventListener('beforeunload', handleBeforeUnload);
-    };
-  }, []);
-
-  return (
-    <>
-      <ThemeSwitcher />
-      <Routes>
-        <Route path='/' element={ <Home />}/>
-        <Route path='/WelcomeMessage' element={ <WelcomeMessage />}/>
-        <Route path='/GettingStart' element={ <GettingStart />}/>
-        <Route path='/BotInfo' element={ <BotInfo />}/>
-        <Route path='/Template' element={ <Template />}/>
-        <Route path='/Bot&Adminvalidated' element={ <BotAdminvalidated />}/>
-        <Route path='/Dashboard' element={ <Dashboard />}/>
-        <Route path='/AboutUs' element={ <AboutUs />}/>
-        <Route path='/Help' element={ <Help />}/>
-        <Route path='/Category' element={ <Category />}/>
-        <Route path='/Wallet' element={ <Wallet />}/>
-        <Route path='/FAQ' element={ <FAQ />}/>
-        <Route path='*' element={ <Error404 />}/>
-      </Routes>
-    </>
-  );
-};
-
-export default AppRoutes;
+    const navigate = useNavigate();
+    const location = useLocation();
+  
+    useEffect(() => {
+      const handleBackButton = () => {
+        if (window.Telegram.WebApp) {
+          window.Telegram.WebApp.BackButton.show();
+          window.Telegram.WebApp.BackButton.onClick(() => {
+            if (location.pathname === '/') {
+              window.Telegram.WebApp.close();
+            } else {
+              navigate(-1);
+            }
+          });
+        }
+      };
+  
+      handleBackButton();
+  
+      return () => {
+        if (window.Telegram.WebApp) {
+          window.Telegram.WebApp.BackButton.hide();
+          window.Telegram.WebApp.BackButton.offClick();
+        }
+      };
+    }, [location, navigate]);
+  
+    useEffect(() => {
+      const handleBeforeUnload = (event) => {
+        event.preventDefault();
+        event.returnValue = ''; // Chrome requires returnValue to be set
+      };
+  
+      window.addEventListener('beforeunload', handleBeforeUnload);
+  
+      return () => {
+        window.removeEventListener('beforeunload', handleBeforeUnload);
+      };
+    }, []);
+  
+    return (
+      <>
+        <ThemeSwitcher />
+        <Routes>
+          <Route path='/' element={ <Home />}/>
+          <Route path='/WelcomeMessage' element={ <WelcomeMessage />}/>
+          <Route path='/GettingStart' element={ <GettingStart />}/>
+          <Route path='/BotInfo' element={ <BotInfo />}/>
+          <Route path='/Template' element={ <Template />}/>
+          <Route path='/Bot&Adminvalidated' element={ <BotAdminvalidated />}/>
+          <Route path='/Dashboard' element={ <Dashboard />}/>
+          <Route path='/AboutUs' element={ <AboutUs />}/>
+          <Route path='/Help' element={ <Help />}/>
+          <Route path='/Category' element={ <Category />}/>
+          <Route path='/Wallet' element={ <Wallet />}/>
+          <Route path='/FAQ' element={ <FAQ />}/>
+          <Route path='*' element={ <Error404 />}/>
+        </Routes>
+      </>
+    );
+  };
+  
+  export default AppRoutes;

@@ -16,6 +16,19 @@ function App() {
     }, 3000); // مدت زمان شبیه‌سازی شده برای بارگذاری
   }, []);
 
+  useEffect(() => {
+    const handleBeforeUnload = (event) => {
+      event.preventDefault();
+      event.returnValue = ''; // Chrome requires returnValue to be set
+    };
+
+    window.addEventListener('beforeunload', handleBeforeUnload);
+
+    return () => {
+      window.removeEventListener('beforeunload', handleBeforeUnload);
+    };
+  }, []);
+
   return (
     <section>
       {isLoading ? (
