@@ -21,24 +21,21 @@ const AppRoutes = () => {
     const location = useLocation();
   
     useEffect(() => {
-      const tg = window.Telegram.WebApp;
-  
-      if (tg) {
-        tg.BackButton.show();
-        tg.BackButton.onClick(() => {
-          if (location.pathname === '/') {
-            tg.HapticFeedback.impactOccurred('medium');
-            tg.close();
-          } else {
+      const handleBackButton = () => {
+        if (window.Telegram.WebApp) {
+          window.Telegram.WebApp.BackButton.show();
+          window.Telegram.WebApp.BackButton.onClick(() => {
             navigate(-1);
-          }
-        });
-      }
+          });
+        }
+      };
+  
+      handleBackButton();
   
       return () => {
-        if (tg) {
-          tg.BackButton.hide();
-          tg.BackButton.offClick();
+        if (window.Telegram.WebApp) {
+          window.Telegram.WebApp.BackButton.hide();
+          window.Telegram.WebApp.BackButton.offClick();
         }
       };
     }, [location, navigate]);
