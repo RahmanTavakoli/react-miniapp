@@ -26,7 +26,10 @@ const AppRoutes = () => {
           window.Telegram.WebApp.BackButton.show();
           window.Telegram.WebApp.BackButton.onClick(() => {
             if (location.pathname === '/') {
-              window.Telegram.WebApp.close();
+              const confirmExit = window.confirm("Are you sure exit from Vendorz؟");
+              if (confirmExit) {
+                window.Telegram.WebApp.close();
+              }
             } else {
               navigate(-1);
             }
@@ -43,19 +46,6 @@ const AppRoutes = () => {
         }
       };
     }, [location, navigate]);
-  
-    useEffect(() => {
-      const handleBeforeUnload = (event) => {
-        event.preventDefault();
-        event.returnValue = ''; // Chrome requires returnValue to be set
-      };
-  
-      window.addEventListener('beforeunload', handleBeforeUnload);
-  
-      return () => {
-        window.removeEventListener('beforeunload', handleBeforeUnload);
-      };
-    }, []);
   
     return (
       <>
