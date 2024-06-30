@@ -40,6 +40,19 @@ const AppRoutes = () => {
       };
     }, [location, navigate]);
   
+    useEffect(() => {
+      const handleBeforeUnload = (event) => {
+        event.preventDefault();
+        event.returnValue = ''; // Chrome requires returnValue to be set
+      };
+  
+      window.addEventListener('beforeunload', handleBeforeUnload);
+  
+      return () => {
+        window.removeEventListener('beforeunload', handleBeforeUnload);
+      };
+    }, []);
+  
     return (
       <>
         <ThemeSwitcher />
