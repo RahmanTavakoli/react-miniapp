@@ -5,7 +5,7 @@ import React, { useEffect, useState } from 'react';
 import Preloader from './Pages/Preloader';
 import { BrowserRouter as Router } from 'react-router-dom';
 import RoutesComponent from './Components/AppRoutes';
-import ThemeSwitcher from './Pages/ThemeSwitcher';
+import ThemeSwitcher from "./Pages/ThemeSwitcher"
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -23,7 +23,7 @@ function App() {
         <Preloader />
       ) : (
         <Router>
-          <ThemeSwitcher />
+          <ThemeSwitcher/>
           <RoutesComponent />
         </Router>
       )}
