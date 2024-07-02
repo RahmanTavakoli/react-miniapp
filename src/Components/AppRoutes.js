@@ -19,15 +19,18 @@ import { WelcomeMessage } from '../Pages/WelcomeMessage';
 const RoutesComponent = () => {
   const navigate = useNavigate();
 
- useEffect(() => {
+  useEffect(() => {
     WebApp.ready();
     WebApp.BackButton.show();
-    WebApp.onEvent('backButtonClicked', function() {
+
+    function handleBackButtonClicked() {
       navigate(-1); // برگشت به صفحه قبل
-    });
+    }
+
+    WebApp.onEvent('backButtonClicked', handleBackButtonClicked);
     
     return () => {
-      WebApp.offEvent('backButtonClicked');
+      WebApp.offEvent('backButtonClicked', handleBackButtonClicked);
     };
   }, [navigate]);
 
