@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { Route, Routes, useNavigate } from 'react-router-dom';
+import { Route, Routes, useNavigate , useLocation } from 'react-router-dom';
 
 import { AboutUs } from '../Pages/AboutUs';
 import { BotAdminvalidated } from '../Pages/BotAdminvalidated';
@@ -18,21 +18,28 @@ import { WelcomeMessage } from '../Pages/WelcomeMessage';
 
 const RoutesComponent = () => {
   const navigate = useNavigate();
+  const location = useLocation();
 
   useEffect(() => {
     WebApp.ready();
-    WebApp.BackButton.show();
 
     function handleBackButtonClicked() {
       navigate(-1); // برگشت به صفحه قبل
     }
 
     WebApp.onEvent('backButtonClicked', handleBackButtonClicked);
+
+    // نمایش یا مخفی کردن دکمه برگشت بسته به مسیر فعلی
+    if (location.pathname === '/' || location.pathname === '/Home') {
+      WebApp.BackButton.hide();
+    } else {
+      WebApp.BackButton.show();
+    }
     
     return () => {
       WebApp.offEvent('backButtonClicked', handleBackButtonClicked);
     };
-  }, [navigate]);
+  }, [navigate, location]);
 
   return (
     <Routes>
