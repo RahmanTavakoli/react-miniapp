@@ -6,6 +6,7 @@ import { BotAdminvalidated } from '../Pages/BotAdminvalidated';
 import { BotInfo } from '../Pages/BotInfo';
 import { Category } from '../Pages/Category';
 import { Dashboard } from '../Pages/Dashboard';
+import { TelTheme } from '../Pages/TelThemeTest';
 import { Error404 } from '../Pages/404';
 import { FAQ } from '../Pages/FAQ';
 import { GettingStart } from '../Pages/GettingStart';
@@ -51,6 +52,7 @@ const RoutesComponent = () => {
       <Route path='/Home/WelcomeMessage/GettingStart/BotInfo/Template' element={<Template />} />
       <Route path='/Home/WelcomeMessage/GettingStart/BotInfo/Template/Bot&Adminvalidated' element={<BotAdminvalidated />} />
       <Route path='/Home/WelcomeMessage/GettingStart/BotInfo/Template/Bot&Adminvalidated/Dashboard' element={<Dashboard />} />
+      <Route path='/Home/WelcomeMessage/GettingStart/BotInfo/Template/Bot&Adminvalidated/Dashboard/telTheme' element={< TelTheme/>} />
       <Route path='/Home/AboutUs' element={<AboutUs />} />
       <Route path='/Home/Help' element={<Help />} />
       <Route path='/Home/Category' element={<Category />} />

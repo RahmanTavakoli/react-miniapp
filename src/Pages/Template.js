@@ -103,9 +103,9 @@ export const Template = () => {
                 <p className="text-[13px] m-4 opacity-55" dir="rtl">قالب انتخابی شما تاثیری بر روی عملکرد فروشگاه شما نخواهد داشت
                 </p>
                 {/*  Toggle Content  */}
-                <div id="button-content" className={`mt-80 ${isChecked ? 'block' : 'hidden'}`}>
+                <div id="button-content" className={`mt-40 ${isChecked ? 'block' : 'hidden'}`}>
                     <Link to="/Home/WelcomeMessage/GettingStart/BotInfo/Template/Bot&Adminvalidated" id="submitButton"
-                        className="mt-40 p-4 bg-sky-500 dark:bg-sky-800 rounded-[15px] m-3 w-[87%] flex justify-center mx-auto text-white">
+                        className="mt-10 p-4 bg-sky-500 dark:bg-sky-800 rounded-[15px] m-3 w-[87%] flex justify-center mx-auto text-white">
                         بعدی
                         <span className="ps-2">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5"

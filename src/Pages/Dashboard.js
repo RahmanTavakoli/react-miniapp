@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from "react-router-dom"
 
 export const Dashboard= ()=>{
     return (
@@ -125,7 +126,7 @@ export const Dashboard= ()=>{
             <div class="h-[1px] w-[90%] mx-auto bg-gray-100  dark:bg-slate-700 opacity-75"></div>
               {/* {/*End Divider  */}
               {/* {/* Menu Btn  */}
-            <button class="w-full bg-white flex rounded-t-[10px] justify-between dark:bg-slate-800 dark:text-white">
+            <Link to="/Home/WelcomeMessage/GettingStart/BotInfo/Template/Bot&Adminvalidated/Dashboard/telTheme" class="w-full bg-white flex rounded-t-[10px] justify-between dark:bg-slate-800 dark:text-white">
                 <div class="my-auto m-6">
                     <div class="opacity-30 flex">
                           {/* {/* Premium lvl */}
@@ -150,7 +151,7 @@ export const Dashboard= ()=>{
 
                     </div>
                 </div>
-            </button>
+            </Link>
               {/* {/* Divider  */}
             <div class="h-[1px] w-[90%] mx-auto bg-gray-100  dark:bg-slate-700 opacity-75"></div>
               {/* {/*End Divider  */}

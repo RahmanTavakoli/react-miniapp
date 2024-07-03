@@ -4,7 +4,7 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-// index.js یا App.js
+// ZoomDesable
 document.addEventListener('gesturestart', function (event) {
   event.preventDefault();
   document.body.style.zoom = 1; // برای برخی از مرورگرها

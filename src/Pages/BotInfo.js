@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { ShopNameLengthIndicator , shopNameLength } from "../Components/InputLengthCounter"
 
 import { Link } from "react-router-dom";
 
@@ -45,21 +46,8 @@ export const BotInfo = () => {
                             نام فروشگاه
                         </label>
                     </div>
-                    {shopNameLength > 0 && shopNameLength <= 4 &&(
-                        <p className="text-[13px] mx-8 mt-1 text-red-700 opacity-55" dir="rtl">
-                           30/ {shopNameLength}
-                        </p>
-                    )}
-                    {shopNameLength > 4 && shopNameLength <= 30 &&(
-                        <p className="text-[13px] mx-8 mt-1 opacity-55" dir="rtl">
-                           30/ {shopNameLength}
-                        </p>
-                    )}
-                    {shopNameLength > 30 && (
-                        <p className="text-[13px] mx-8 mt-1 text-red-700 opacity-55" dir="rtl">
-                           30/ {shopNameLength}
-                        </p>
-                    )}
+                    {/* شمارش طول input */}
+                    <ShopNameLengthIndicator shopNameLength={shopNameLength} />
                 </div>
                 <p className="text-[13px] mx-8 opacity-55" dir="rtl">
                     نام فروشگاه اینترنتی خود را وارد کنید. این  نامی است که مشتریان آن را می‌بینند.
@@ -89,7 +77,7 @@ export const BotInfo = () => {
                 </p>
                 {/* Submit Button */}
                 {isFormValid && (
-                    <Link to="/Home/WelcomeMessage/GettingStart/BotInfo/Template" id="submitButton" className="mt-40 p-4 bg-sky-500 dark:bg-sky-800 rounded-[15px] m-3 w-[87%] flex justify-center mx-auto text-white">
+                    <Link to="/Home/WelcomeMessage/GettingStart/BotInfo/Template" id="submitButton" className="mt-20 p-4 bg-sky-500 dark:bg-sky-800 rounded-[15px] m-3 w-[87%] flex justify-center mx-auto text-white">
                         بعدی
                         <span className="ps-2">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="size-6">
