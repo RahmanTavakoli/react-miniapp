@@ -4,23 +4,29 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-document.addEventListener('touchmove', function(event) {
-  if (event.scale !== 1) {
-      event.preventDefault();
+// index.js یا App.js
+document.addEventListener('gesturestart', function (event) {
+  event.preventDefault();
+  document.body.style.zoom = 1; // برای برخی از مرورگرها
+});
+
+document.addEventListener('gesturechange', function (event) {
+  event.preventDefault();
+  document.body.style.zoom = 1; // برای برخی از مرورگرها
+});
+
+document.addEventListener('gestureend', function (event) {
+  event.preventDefault();
+  document.body.style.zoom = 1; // برای برخی از مرورگرها
+});
+
+// فقط جلوگیری از زوم در دستگاه‌های لمسی
+document.addEventListener('touchmove', function (event) {
+  if (event.scale !== undefined && event.scale !== 1) {
+    event.preventDefault();
   }
 }, { passive: false });
 
-document.addEventListener('gesturestart', function(event) {
-  event.preventDefault();
-});
-
-document.addEventListener('gesturechange', function(event) {
-  event.preventDefault();
-});
-
-document.addEventListener('gestureend', function(event) {
-  event.preventDefault();
-});
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
