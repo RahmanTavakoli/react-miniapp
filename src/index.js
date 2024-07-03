@@ -4,6 +4,24 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+document.addEventListener('touchmove', function(event) {
+  if (event.scale !== 1) {
+      event.preventDefault();
+  }
+}, { passive: false });
+
+document.addEventListener('gesturestart', function(event) {
+  event.preventDefault();
+});
+
+document.addEventListener('gesturechange', function(event) {
+  event.preventDefault();
+});
+
+document.addEventListener('gestureend', function(event) {
+  event.preventDefault();
+});
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
